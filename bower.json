@@ -1,0 +1,13 @@
+{
+  "name": "osm-meta-viz",
+  "version": "0.0.0",
+  "authors": [
+    "danbjoseph <danbjoseph@gmail.com>"
+  ],
+  "license": "",
+  "dependencies": {
+    "d3": "~3.5.5",
+    "jquery": "~1",
+    "bootstrap": "~3.3.4"
+  }
+}
