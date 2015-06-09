@@ -28,24 +28,29 @@ function getNumbers(){
 
 }
 
+function readNumber(span){
+  var str = span.text().replace(/,/g, "");
+  return parseInt(str);
+}
+
 function compare(){
   d3.selectAll('.totals').classed('winner', false);
 
-  if(parseInt($('#totalContributors1').text()) > parseInt($('#totalContributors2').text())){
+  if(readNumber($('#totalContributors1')) > readNumber($('#totalContributors2'))){
     $('#totalContributors1').addClass('winner');
-  } else if (parseInt($('#totalContributors1').text()) < parseInt($('#totalContributors2').text())){
+  } else if (readNumber($('#totalContributors1')) < readNumber($('#totalContributors2'))){
     $('#totalContributors2').addClass('winner');
   }
 
-  if(parseInt($('#totalEdits1').text()) > parseInt($('#totalEdits2').text())){
+  if(readNumber($('#totalEdits1')) > readNumber($('#totalEdits2'))){
     $('#totalEdits1').addClass('winner');
-  } else if (parseInt($('#totalEdits1').text()) < parseInt($('#totalEdits2').text())){
+  } else if (readNumber($('#totalEdits1')) < readNumber($('#totalEdits2'))){
     $('#totalEdits2').addClass('winner');
   }
 
-  if(parseInt($('#totalResults1').text()) > parseInt($('#totalResults2').text())){
+  if(readNumber($('#totalResults1')) > readNumber($('#totalResults2'))){
     $('#totalResults1').addClass('winner');
-  } else if (parseInt($('#totalResults1').text()) < parseInt($('#totalResults2').text())){
+  } else if (readNumber($('#totalResults1')) < readNumber($('#totalResults2'))){
     $('#totalResults2').addClass('winner');
   }
 
